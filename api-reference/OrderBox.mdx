@@ -1,0 +1,77 @@
+---
+title: "Order Box"
+---
+Order box is a advanced feature for API module Settings:<br/>
+-You can add up to 5 boxes to be used for packing your items -The system will calculate the most efficient and cheapest boxes for the items<br/>
+This feature is intended for customers who might have a large number of small items to be boxed before dispatching and want to achieve better rates.<br/>
+Multiple packages will be consolidated in boxes and computed based on the total dimension and volumetric weight. Afterwards, these items will be placed in the smallest box size capable of supporting the amount of items.<br/>
+Note: This is an advanced functionality - do not enable this if you do not fully understand the implications that this will have on quoting.
+<img src="/images/transdirect-image2.png" />
+<ul>
+<li>Minimum fill: allows you to individually quote items outside boxes if they don’t fill a given last box (if multiple boxes in a shipment) by a certain percentage;</li>
+<li>Box dimension fields: You may input a maximum of 5 boxes that can be used. Order Boxing functions will select the best combination of boxes to fit your items;</li>
+<li>Note: This request is generated as part of a Quote request.</li>
+<li>
+<RequestExample>
+```
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+    "items": [
+        {
+            "weight":0.5,
+            "height":10,
+            "width":5,
+            "length":3,
+            "quantity":1,
+            "description":"Carton",
+            "sku": "ABC123"
+        },
+        {
+            "weight":7,
+            "height":48,
+            "width":20,
+            "length":15,
+            "quantity":1,
+            "description":"Carton",
+            "sku": "ABC234"
+        },
+        {
+            "weight":3,
+            "height":24,
+            "width":5,
+            "length":15,
+            "quantity":1,
+            "description":"Carton",
+            "sku": "ABC456"
+        },
+        {
+            "weight":70,
+            "height":100,
+            "width":100,
+            "length":100,
+            "quantity":1,
+            "description":"Carton",
+            "sku": "ABC789"
+        }
+    ]
+}
+``` 
+</RequestExample> </li>
+<ResponseExample>
+```json Response
+    "items": [
+            {
+                "id": 3965588,
+                "description": "Carton",
+                "weight": 81,
+                "length": 120,
+                "width": 120,
+                "height": 120,
+                "quantity": 1,
+                "sku": false
+            }
+        ],
+```
+</ResponseExample>
+</ul>

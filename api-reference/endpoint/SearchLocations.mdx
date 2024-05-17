@@ -1,0 +1,67 @@
+---
+title: "Search Locations"
+api: "GET https://www.transdirect.com.au/api/locations?q="
+---
+### body
+<ParamField path="q" type="string">
+q
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/locations?q='
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "locations": {
+    "8742": {
+      "id": "8742",
+      "locality": "BRISBANE ADELAIDE STREET",
+      "postcode": "4000",
+      "state": "QLD",
+      "priority": "10"
+    },
+    "8743": {
+      "id": "8743",
+      "locality": "BRISBANE CITY",
+      "postcode": "4000",
+      "state": "QLD",
+      "priority": "10"
+    },
+    "8744": {
+      "id": "8744",
+      "locality": "BRISBANE GPO",
+      "postcode": "4000",
+      "state": "QLD",
+      "priority": "10"
+    },
+    "8745": {
+      "id": "8745",
+      "locality": "PETRIE TERRACE",
+      "postcode": "4000",
+      "state": "QLD",
+      "priority": "10"
+    },
+    "8746": {
+      "id": "8746",
+      "locality": "SPRING HILL",
+      "postcode": "4000",
+      "state": "QLD",
+      "priority": "10"
+    },
+    "16640": {
+      "id": "16640",
+      "locality": "BRISBANE",
+      "postcode": "4000",
+      "state": "QLD",
+      "priority": "10"
+    }
+  }
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ 200
+```
+</ResponseExample>

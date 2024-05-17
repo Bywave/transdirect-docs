@@ -1,0 +1,29 @@
+---
+# fec5ae54d239f1bbf23a12010989ba17
+title: "Booking Conformation"
+description: "Example: /bookings/v4/623630"
+api: "POST https://www.transdirect.com.au/api/bookings/v4/id/confirm"
+---
+### body 
+<ParamField path="id" type="int">
+id
+</ParamField>
+<b>Notes:</b> While you test the integration, the booking will have a “demo” status by default once the booking is confirmed. When you feel your API integration is finalized, please contact our Customer Support to allow your account to create live bookings.
+<RequestExample>
+```bash Example Request
+curl --location --request POST 'https://www.transdirect.com.au/api/bookings/v4/id/confirm'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+   {
+  "courier": "allied",
+  "pickup-date": "2015-08-27"
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ 204
+```
+</ResponseExample>

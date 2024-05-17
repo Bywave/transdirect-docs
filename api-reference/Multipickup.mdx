@@ -1,0 +1,265 @@
+---
+title: "Multipickup"
+---
+Multipickup Tiers allows bookings to be booked via batches.<br/>
+Each batch is picked up from a given location and you can have distinct batches to be picked up from distinct locations.<br/>
+Each batch will also be booked on a given date and you will able to complete the booking once you have assigned the minimums shipments amounts for each batch.<br/>
+Multipickup bookings gives you access to cheaper Courier rates since this process reduces the operational costs for Couriers, which will be able to pickup multiple shipments from a given location on a given day.
+## Set Up
+<ul>
+<li>You can setup the API to always return the Multipickup Tier price instead of the Everday Price by editing the API module Here.<img src="/images/transdirect-image3.png" /><img src="/images/transdirect-image4.png" /></li>
+</ul>
+When you enable a Tier Price option, the quotes returned by the API will always be from Tier prices.<br/>
+Please note that currently only Couriers Please and Fastway offer Multipickup.
+## API Quote Examples
+The following is a sample quote when you set the Multipickup options to always display the Everyday price.
+<RequestExample>
+```
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+   {
+    "declared_value": "1000.00",
+    "referrer": "API",
+    "requesting_site": "http://www.woocommerce.com.au",
+    "tailgate_pickup": true,
+    "tailgate_delivery": true,
+    "items": [
+        {
+            "weight": "38.63",          
+            "height": "0.25",           
+            "width": "1.65",            
+            "length": "3.32",           
+            "quantity": 1,              
+            "description": "carton"     
+        },
+        {
+            "weight": "39.63",          
+            "height": "1.25",           
+            "width": "2.65",            
+            "length": "4.32",           
+            "quantity": 2,              
+            "description": "carton"     
+        }
+    ],
+    "sender": {
+        "address": "21 Kirksway Place",     
+        "company_name": "",             
+        "email": "",
+        "name": "",
+        "postcode": "2000",
+        "phone": 123456789, 
+        "state": "",
+        "suburb": "SYDNEY",            
+        "type": "business",             
+        "country": "AU"                 
+    },
+    "receiver": {
+        "address": "216 Moggill Rd",         
+        "company_name": "",   
+        "email": "",
+        "name": "John Smith",
+        "postcode": "3000",
+        "phone": 123456789, 
+        "state": "",
+        "suburb": "MELBOURNE",
+        "type": "business",             
+        "country": "AU"                 
+    }
+}
+}
+``` 
+</RequestExample> 
+<ResponseExample>
+```json Response
+   {
+    "id": 725625,
+    "booked_at": "2015-05-14T19:38:55+1000",
+    "booked_by": "sender",
+    "created_at": "2015-05-14T19:39:03+1000",
+    "declared_value": 1000,
+    "insured_value": 0,
+    "description": null,
+    "items": [
+        {
+            "id": 1177622,
+            "description": "carton",
+            "weight": 38.63,
+            "length": 3.32,
+            "width": 1.65,
+            "height": 0.25,
+            "quantity": 1
+        },
+        {
+            "id": 1177623,
+            "description": "carton",
+            "weight": 39.63,
+            "length": 4.32,
+            "width": 2.65,
+            "height": 1.25,
+            "quantity": 2
+        }
+    ],
+    "label": "http://www.dev.transdirect.com.au/api/bookings/725625/label",
+    "notifications": {
+        "email": false,
+        "sms": false
+    },
+    "quotes": {
+        "allied": {
+            "total": 79.24,
+            "price_insurance_ex": 72.09,
+            "fee": 7.15,
+            "insured_amount": 4500,
+            "service": "road",
+            "transit_time": "1-2 days",
+            "pickup_dates": [
+                "2015-08-27",
+                "2015-08-28"
+            ],
+            "pickup_time": {
+                "from": "14:00",
+                "to": "18:00"
+            }
+        },
+        "tnt_overnight_express": {
+            "total": 34.915,
+            "price_insurance_ex": 27.765,
+            "fee": 7.15,
+            "insured_amount": 4500,
+            "service": "road",
+            "transit_time": "4 days",
+            "pickup_dates": [
+                "2015-08-27",
+                "2015-08-28"
+            ],
+            "pickup_time": {
+                "from": "14:00",
+                "to": "18:00"
+            }
+        },
+        "tnt_road_express": {
+            "total": 41.845,
+            "price_insurance_ex": 34.695,
+            "fee": 7.15,
+            "insured_amount": 4500,
+            "service": "road",
+            "transit_time": "4 days",
+            "pickup_dates": [
+                "2015-08-27",
+                "2015-08-28"
+            ],
+            "pickup_time": {
+                "from": "14:00",
+                "to": "18:00"
+            }
+        },
+        "couriers_please_domestic_proirity_signature": {
+            "total": 11.03,
+            "price_insurance_ex": 11.03,
+            "fee": 0,
+            "applied_gst": 1.11,
+            "insured_amount": 0,
+            "service": "road",
+            "transit_time": "0-1 Business Days",
+            "pickup_dates": [
+                "2019-06-06",
+                "2019-06-07",
+                "2019-06-11",
+                "2019-06-12",
+                "2019-06-13",
+                "2019-06-14",
+                "2019-06-17",
+                "2019-06-18",
+                "2019-06-19",
+                "2019-06-20"
+            ],
+            "pickup_time": {
+                "from": "09:00",
+                "to": "17:00"
+            },
+            "tiers": [
+                {
+                    "identifier": 1,
+                    "description": "Multipickup 10",
+                    "total": 6.96,
+                    "price_insurance_ex": 6.96,
+                    "fee": 0,
+                    "applied_gst": 0.64,
+                    "insured_amount": 0
+                },
+                {
+                    "identifier": 2,
+                    "description": "Multipickup 21",
+                    "total": 5.75,
+                    "price_insurance_ex": 5.75,
+                    "fee": 0,
+                    "applied_gst": 0.53,
+                    "insured_amount": 0
+                }
+            ]
+        }
+    },
+    "receiver": {
+        "id": 1500838,
+        "address": "216 Moggill Rd",
+        "company_name": "",
+        "email": "",
+        "name": "John Smith",
+        "postcode": "3000",
+        "phone": "123456789",
+        "state": "",
+        "suburb": "MELBOURNE",
+        "type": "business",
+        "country": "AU"
+    },
+    "sender": {
+        "id": 1500837,
+        "address": "21 Kirksway Place",
+        "company_name": "",
+        "email": "",
+        "name": "",
+        "postcode": "2000",
+        "phone": "123456789",
+        "state": "",
+        "suburb": "SYDNEY",
+        "type": "business",
+        "country": "AU"
+    },
+    "pickup_window": [],
+    "connote": null,
+    "charged_weight": 0,
+    "scanned_weight": 0,
+    "special_instructions": " - NO REDELIVERY OR REDIRECTION WITHOUT PERMISSION FROM TRANSDIRECT",
+    "status": "new",
+    "updated_at": "2015-05-14T19:39:11+1000",
+    "tailgate_pickup": true,
+    "tailgate_delivery": true
+}
+```
+</ResponseExample>
+<br />
+The following is a sample quote when you set the Multipickup settings to always display the Multpickup price. In this example, we set the Couriers Please to display the Multipickup 21 price.
+## Confirm a Multipickup booking
+This is similar as a normal API confirmation functionality but you will need to specify the tier.
+<RequestExample>
+```
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+   {
+    "courier": "fastway",
+    "pickup-date": "2021-09-17",
+    "tier": 1
+}
+}
+``` 
+</RequestExample>
+<ResponseExample>
+```json Response
+204
+```
+</ResponseExample>
+## Change Log
+06-06-2019: Multipickup functionality added to the API<br />
+27-05-2019: Order Boxing functionality added to the API

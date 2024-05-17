@@ -1,0 +1,35 @@
+---
+title: "Booking Single Items"
+description: "Example: /bookings/v4/623630/items/1177642"
+api: "GET https://www.transdirect.com.au/api/bookings/v4/id/items/item_id"
+---
+### body 
+<ParamField path="id" type="int">
+id
+</ParamField>
+<ParamField path="item_id" type="int">
+item_id
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/bookings/v4/id/items/item_id'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+{
+  "id": 1177642,
+  "description": "carton",
+  "weight": 10,
+  "length": 10,
+  "width": 10,
+  "height": 10,
+  "quantity": 5
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+HTML table format
+```
+</ResponseExample>

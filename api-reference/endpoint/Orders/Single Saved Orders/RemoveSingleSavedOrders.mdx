@@ -1,0 +1,21 @@
+---
+title: "Remove an Order"
+api: "GET https://www.transdirect.com.au/api/orders/id"
+---
+### body
+<ParamField path="id" type="int">
+id
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/orders/id'
+--header 'Content-Type:application/json'\
+--data-raw '{
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+204
+```
+</ResponseExample>

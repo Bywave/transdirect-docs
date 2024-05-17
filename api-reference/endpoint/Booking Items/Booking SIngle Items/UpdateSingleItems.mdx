@@ -1,0 +1,36 @@
+---
+title: "Update an Item"
+api: "PUT https://www.transdirect.com.au/api/bookings/v4/id/items/item_id"
+---
+### body 
+<ParamField path="id" type="int">
+id
+</ParamField>
+<ParamField path="item_id" type="int">
+item_id
+</ParamField>
+    <RequestExample>
+```bash Example Request
+curl --location --request PUT 'https://www.transdirect.com.au/api/bookings/v4/id/items/item_id'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+{
+  "height": 5
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+{
+  "id": 523459,
+  "weight": 10,
+  "height": 5,
+  "width": 10,
+  "length": 10,
+  "quantity": 5,
+  "description": "carton"
+}
+```
+</ResponseExample>

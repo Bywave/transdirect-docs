@@ -1,33 +1,49 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Transdirect Public API V201905"
 ---
-
-<Note>
+### INTRODUCTION
+A very warm welcome to the Transdirect Application Programming Interface (API) documentation that offers booking, tracking, and nationwide shipping and air freight service options suitable for all your delivery needs.
+<ul>
+<li>
+Transdirect uses basic authentication through your member email and password. Example https://www.transdirect.com.au/api/bookings
+</li>
+<li>
+Another way to authenticate is using the generated API key in the member’s area and to create a Custom header with the format "Api-key: [API-KEY-GENERATED]". Example https://www.transdirect.com.au/api/bookings/v4
+</li>
+<li>
+You can generate your API key from Here.
+</li>
+</ul>
+<img src="/images/transdirect-image1.png" />
+{/* <Note>
   If you're not looking to build API reference documentation, you can delete
   this section by removing the api-reference folder.
 </Note>
-
 ## Welcome
-
 There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
+Another way to authenticate is using the generated API key in the member’s area and to create a Custom header with the format "Api-key: [API-KEY-GENERATED]". Example https://www.transdirect.com.au/api/bookings/v4<br /><br /> */}
+## A few notes:<br />
+<ul>
+<li>
+Transdirect uses JSON and will retrieve a 415 error on invalid content types.<br />
+</li>
+<li>
+Dates and Times are in ISO8601 format.
+</li>
+</ul>
+{/* <Card
   title="Plant Store Endpoints"
   icon="leaf"
   href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
 >
   View the OpenAPI specification file
-</Card>
-
-## Authentication
-
+</Card> */}
+{/* ## Authentication
 All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
 ```json
 "security": [
   {
     "bearerAuth": []
   }
 ]
-```
+``` */}

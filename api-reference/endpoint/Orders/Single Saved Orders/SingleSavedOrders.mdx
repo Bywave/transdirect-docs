@@ -1,0 +1,136 @@
+---
+title: "Single Saved Order"
+description: "<b>Example:</b> /orders/4<br/>
+<b>Statuses:</b> pending, booked, manually_dispatched, cancelled"
+api: "GET https://www.transdirect.com.au/api/orders/id"
+---
+### body
+<ParamField path="id" type="int">
+id
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/orders/id'
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "id": 623630,
+  "booked_at": "2015-01-08T14:42:07+1100",
+  "booked_by": "sender",
+  "created_at": "2015-05-18T13:44:25+1000",
+  "declared_value": 0,
+  "insured_value": 0,
+  "description": "TEST BOOKINGS",
+  "items": [
+    {
+      "id": 1055686,
+      "description": "Carton",
+      "weight": 5,
+      "length": 5,
+      "width": 10,
+      "height": 5,
+      "quantity": 1
+    }
+  ],
+  "label": "http://www.dev.transdirect.com.au/api/bookings/623630/label",
+  "notifications": {
+    "email": false,
+    "sms": false
+  },
+  "quotes": {
+    "allied": {
+      "total": 79.24,
+      "price_insurance_ex": 72.09,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "1-2 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    },
+    "tnt_overnight_express": {
+      "total": 34.915,
+      "price_insurance_ex": 27.765,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "4 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    },
+    "tnt_road_express": {
+      "total": 41.845,
+      "price_insurance_ex": 34.695,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "4 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    }
+  },
+  "receiver": {
+    "id": 1285798,
+    "address": "1|TEST",
+    "company_name": "TEST Company",
+    "email": "jorge@bywave.com.au",
+    "name": "TEST BOOKINGS",
+    "postcode": "2000",
+    "phone": "1111111111",
+    "state": "NSW",
+    "suburb": "SYDNEY",
+    "type": "business",
+    "country": "AU"
+  },
+  "sender": {
+    "id": 1285797,
+    "address": "1|TEST",
+    "company_name": "",
+    "email": "jorge@bywave.com.au",
+    "name": "TEST BOOKINGS",
+    "postcode": "2000",
+    "phone": "1111111111",
+    "state": "NSW",
+    "suburb": "SYDNEY",
+    "type": "residential",
+    "country": "AU"
+  },
+  "pickup_window": [
+    "2015-01-12T12:00:00+1100",
+    "2015-01-12T17:00:00+1100"
+  ],
+  "connote": "IRE000623630",
+  "charged_weight": 5,
+  "scanned_weight": 0,
+  "special_instructions": " - NO REDELIVERY OR REDIRECTION WITHOUT PERMISSION FROM TRANSDIRECT",
+  "status": "confirmed",
+  "updated_at": "2015-05-18T13:44:44+1000",
+  "tailgate_pickup": false,
+  "tailgate_delivery": false
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ JSON representation of Booking Resource.
+```
+</ResponseExample>

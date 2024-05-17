@@ -1,0 +1,63 @@
+---
+title: "Update an Order"
+api: "PUT https://www.transdirect.com.au/api/orders/id"
+---
+### body
+<ParamField path="id" type="int">
+id
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request PUT 'https://www.transdirect.com.au/api/orders/id'
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "transdirect_order_id": 12345,
+  "order_id": "4444",
+  "goods_summary": "This is a test",
+  "goods_dump": "Another test",
+  "imported_from": "Woocommerce",
+  "purchased_time": "2015-06-01T16:06:52+1000",
+  "sale_price": 10.2,
+  "selected_courier": "toll",
+  "paid_time": "2015-06-01T16:06:52+1000",
+  "buyer_name": "John Doe",
+  "buyer_email": "john@testemail.com.au",
+  "delivery": {
+    "name": "John Doe",
+    "email": "",
+    "phone": "123456789",
+    "address": "216 Moggill Rd"
+  }
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ {
+  "id": "4",
+  "transdirect_order_id": 817155,
+  "transdirect_member_id": "503",
+  "transdirect_order_status": "pending",
+  "order_id": "4444",
+  "goods_summary": "This is a test",
+  "goods_dump": "Another test",
+  "imported_from": "Woocommerce",
+  "imported_time": "2015-06-01T16:28:21+1000",
+  "purchased_time": "2015-06-01T16:06:52+1000",
+  "sale_price": 10.2,
+  "selected_courier": "toll",
+  "courier_price": 13.2,
+  "paid_time": "2015-06-01T16:06:52+1000",
+  "buyer_name": "John Doe",
+  "buyer_email": "john@testemail.com.au",
+  "delivery": {
+    "name": "John Doe",
+    "email": "",
+    "phone": "123456789",
+    "address": "216 Moggill Rd"
+  }
+}
+```
+</ResponseExample>

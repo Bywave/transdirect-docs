@@ -1,0 +1,201 @@
+---
+# fec5ae54d239f1bbf23a12010989ba17
+title: "Create Booking"
+# description: "'Get a quick quote' will return a booking id that can be further updated with sender, receiver and other shipping options."
+api: "POST https://www.transdirect.com.au/api/bookings/v4"
+---
+### Path 
+<ParamField path="since" type="string">
+since
+</ParamField>
+<ParamField path="sort" type="string">
+sort
+</ParamField>
+At a minimum, the body must contain the fields written on the right column which can be accessed by selecting 'Create a booking or get a quick quote' link above.
+<br />The country field in sender/receiver is set to "AU" for Australia by default. For any other country you need to pass respective country ISO2 code (EX: "US" for United States, "SG" for Singapore).
+## Notes
+<ul>
+  <li>tailgate_pickup and tailgate_delivery are optional fields and they are set to false by default.</li>
+  <li>If the shipment item exceeds 25kgs, you must have a forklift available at pickup and delivery address. So if you do not have a forklift, you must pass a true value for tailgate_pickup and tailgate_delivery and surcharges will be applied.</li>
+</ul>
+<RequestExample>
+```bash Example Request
+curl --location --request POST 'https://www.transdirect.com.au/api/bookings/v4'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+   {
+  "declared_value": "1000.00",
+  "referrer": "API",
+  "requesting_site": "http://www.woocommerce.com.au",
+  "tailgate_pickup": true,
+  "tailgate_delivery": true,
+  "items": [
+    {
+      "weight": "38.63",
+      "height": "0.25",
+      "width": "1.65",
+      "length": "3.32",
+      "quantity": 1,
+      "description": "carton"
+    },
+    {
+      "weight": "39.63",
+      "height": "1.25",
+      "width": "2.65",
+      "length": "4.32",
+      "quantity": 2,
+      "description": "carton"
+    }
+  ],
+  "sender": {
+    "address": "21 Kirksway Place",
+    "company_name": "",
+    "email": "",
+    "name": "",
+    "postcode": "2000",
+    "phone": 123456789,
+    "state": "",
+    "suburb": "SYDNEY",
+    "type": "business",
+    "country": "AU"
+  },
+  "receiver": {
+    "address": "216 Moggill Rd",
+    "company_name": "",
+    "email": "",
+    "name": "John Smith",
+    "postcode": "3000",
+    "phone": 123456789,
+    "state": "",
+    "suburb": "MELBOURNE",
+    "type": "business",
+    "country": "AU"
+  }
+},
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+{
+  "id": 725625,
+  "booked_at": "2015-05-14T19:38:55+1000",
+  "booked_by": "sender",
+  "created_at": "2015-05-14T19:39:03+1000",
+  "declared_value": 1000,
+  "insured_value": 0,
+  "description": null,
+  "items": [
+    {
+      "id": 1177622,
+      "description": "carton",
+      "weight": 38.63,
+      "length": 3.32,
+      "width": 1.65,
+      "height": 0.25,
+      "quantity": 1
+    },
+    {
+      "id": 1177623,
+      "description": "carton",
+      "weight": 39.63,
+      "length": 4.32,
+      "width": 2.65,
+      "height": 1.25,
+      "quantity": 2
+    }
+  ],
+  "label": "http://www.dev.transdirect.com.au/api/bookings/725625/label",
+  "notifications": {
+    "email": false,
+    "sms": false
+  },
+  "quotes": {
+    "allied": {
+      "total": 79.24,
+      "price_insurance_ex": 72.09,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "1-2 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    },
+    "tnt_overnight_express": {
+      "total": 34.915,
+      "price_insurance_ex": 27.765,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "4 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    },
+    "tnt_road_express": {
+      "total": 41.845,
+      "price_insurance_ex": 34.695,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "4 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    }
+  },
+  "receiver": {
+    "id": 1500838,
+    "address": "216 Moggill Rd",
+    "company_name": "",
+    "email": "",
+    "name": "John Smith",
+    "postcode": "3000",
+    "phone": "123456789",
+    "state": "",
+    "suburb": "MELBOURNE",
+    "type": "business",
+    "country": "AU"
+  },
+  "sender": {
+    "id": 1500837,
+    "address": "21 Kirksway Place",
+    "company_name": "",
+    "email": "",
+    "name": "",
+    "postcode": "2000",
+    "phone": "123456789",
+    "state": "",
+    "suburb": "SYDNEY",
+    "type": "business",
+    "country": "AU"
+  },
+  "pickup_window": [],
+  "connote": null,
+  "charged_weight": 0,
+  "scanned_weight": 0,
+  "special_instructions": " - NO REDELIVERY OR REDIRECTION WITHOUT PERMISSION FROM TRANSDIRECT",
+  "status": "new",
+  "updated_at": "2015-05-14T19:39:11+1000",
+  "tailgate_pickup": true,
+  "tailgate_delivery": true
+}
+```
+</ResponseExample>

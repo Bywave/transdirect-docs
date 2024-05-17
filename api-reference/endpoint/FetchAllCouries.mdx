@@ -1,0 +1,42 @@
+---
+title: "Fetch all couriers supported"
+api: "GET https://www.transdirect.com.au/api/couriers"
+---
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/couriers'
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "Allied": "allied",
+  "Couriers Please": "couriers_please",
+  "Direct Couriers": {
+    "Regular": "direct_couriers_regular",
+    "Express": "direct_couriers_express",
+    "Elite": "direct_couriers_elite"
+  },
+  "Fastway": "fastway",
+  "Mainfreight": "mainfreight",
+  "Northline": "northline",
+  "TNT Express": {
+    "TNT 9AM": "tnt_nine_express",
+    "TNT 10AM": "tnt_ten_express",
+    "TNT 12PM": "tnt_twelve_express",
+    "TNT Overnight": "tnt_overnight_express",
+    "TNT Road Express": "tnt_road_express"
+  },
+  "Toll": {
+    "Toll Ipec": "toll",
+    "Toll Priority": "toll_priority",
+    "Toll Priority Overnight": "toll_priority_overnight",
+    "Toll Priority Same Day": "toll_priority_sameday"
+  }
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ 200
+```
+</ResponseExample>
