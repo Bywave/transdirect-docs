@@ -1,12 +1,28 @@
 ---
 # fec5ae54d239f1bbf23a12010989ba17
-title: "Booking Items   "
+title: "Booking Items"
 description: "Example: /bookings/v4/623630/items"
-api: "GET https://www.transdirect.com.au/api/bookings/v4/id/items"
+# api: "GET https://www.transdirect.com.au/api/bookings/v4/id/items"
+openapi: "GET /bookings/v4/{id}/items"
 ---
 ### body 
-<ParamField path="id" type="int">
-id
+<ParamField path="description" type="string">
+description
+</ParamField>
+<ParamField path="weight" type="number">
+weight
+</ParamField>
+<ParamField path="length" type="number">
+length
+</ParamField>
+<ParamField path="width" type="number">
+width
+</ParamField>
+<ParamField path="height" type="number">
+height
+</ParamField>
+<ParamField path="quantity" type="number">
+quantity
 </ParamField>
 <RequestExample>
 ```bash Example Request

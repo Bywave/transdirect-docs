@@ -1,6 +1,6 @@
 @media (min-width: 1024px) {
   .lg\:mt-8 {
-    margin-top: 0rem;
+    margin-top: 1rem;
   }
 }
 :is(.dark .dark\:border-white\/10) {

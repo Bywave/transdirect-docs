@@ -1,0 +1,85 @@
+---
+title: "Creating Customs Declaration"
+description: "Example: /bookings/v4/623630/custom_declaration<br/><br/>
+<b>Notes:</b> This can only be done in international bookings"
+# api: "POST https://www.transdirect.com.au/api/booking/v4/id/custom_declaration"
+openapi: "POST /v4/{id}/custom_declaration"
+---
+<ParamField body="name" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="email" type="string" required="true">
+items must be object value 
+</ParamField>
+<ParamField body="phone" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="company_name" type="string" required="true">
+items must be object value 
+</ParamField>
+<ParamField body="booking_party_details_type" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="reason_of_shipment" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="items" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="item" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="description" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="weight" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="quantity" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="invoice_value" type="date">
+items must be object value 
+</ParamField>
+<ParamField body="invoice_description" type="date">
+items must be object value 
+</ParamField>
+<ParamField body="manufacturer_country" type="date">
+items must be object value 
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request POST 'https://www.transdirect.com.au/api/booking/v4/id/custom_declaration'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+{
+    "custom_declaration": {
+        "name": "Johnny Maker",
+        "email": "john_maker@google.com",
+        "phone": "61412345678",
+        "company_name": "Shoe Makers",
+        "booking_party_details_type": 1,
+        "reason_of_shipment": "Gift",
+        "items": [
+            "item": "Shoes",
+            "description": "Pair of black leather shoes",
+            "weight": "5",
+            "quantity": "2",
+            "invoice_value": "2.5",
+            "invoice_description": "Shoe Invoice",
+            "manufacturer_country": "AU"
+        ]
+    }
+},
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+{
+  "status": "success",
+  "message": "Customs Declaration Successfully created"
+}
+```
+</ResponseExample>

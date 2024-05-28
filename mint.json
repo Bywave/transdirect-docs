@@ -69,107 +69,194 @@
       ]
     },
     {
-      "group": "",
+      "group": "API Reference",
       "pages": [
-        "api-reference/introduction",
-        "api-reference/BookingSimpleQuotes"
+        "api-reference/introduction"
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/endpoint/Create",
-        "api-reference/endpoint/GetBooking",
-        "api-reference/endpoint/Single Booking/GetSingleBooking",
-        "api-reference/endpoint/Single Booking/UpdateBooing",
-        "api-reference/endpoint/Single Booking/RemoveBooking",
-        "api-reference/endpoint/BookingConformation",
-        "api-reference/endpoint/TrackingBooking",
-        "api-reference/endpoint/CreateCustom"
+        {
+          "group": "Bookings/ Simple Quotes",
+          "pages": [
+            "api-reference/BookingSimpleQuotes",
+            {
+              "group": "Create Booking",
+              "pages": [
+                "api-reference/endpoint/Bookings Simple Quotes/Create"
+              ]
+            },
+            {
+              "group": "Get Booking",
+              "pages": [
+                "api-reference/endpoint/Bookings Simple Quotes/GetBooking"
+              ]
+            },
+            {
+              "group": "Single Booking",
+              "pages": [
+                "api-reference/endpoint/Bookings Simple Quotes/Single Booking/Single Bookings/GetSingleBooking",
+                "api-reference/endpoint/Bookings Simple Quotes/Single Booking/Single Bookings/UpdateBooing",
+                "api-reference/endpoint/Bookings Simple Quotes/Single Booking/Single Bookings/RemoveBooking"
+              ]
+            },
+            {
+              "group": "Booking Confirmation",
+              "pages": [
+                "api-reference/endpoint/Bookings Simple Quotes/BookingConformation"
+              ]
+            },
+            {
+              "group": "Tracking Booking",
+              "pages": [
+                "api-reference/endpoint/Bookings Simple Quotes/TrackingBooking"
+              ]
+            },
+            {
+              "group": "Creating Customs Declaration",
+              "pages": [
+                "api-reference/endpoint/Bookings Simple Quotes/CreateCustom"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/BookingItems"
+        {
+          "group": "Booking Items",
+          "pages": [
+            {
+              "group": "Booking Items",
+              "pages": [
+                "api-reference/endpoint/Booking Items/Booking Items/BoookingItems",
+                "api-reference/endpoint/Booking Items/Booking Items/AddItems"
+              ]
+            },
+            {
+              "group": "Booking Single Items",
+              "pages": [
+                "api-reference/endpoint/Booking Items/Booking SIngle Items/BookingSingleItems",
+                "api-reference/endpoint/Booking Items/Booking SIngle Items/UpdateSingleItems",
+                "api-reference/endpoint/Booking Items/Booking SIngle Items/RemoveSingleItems"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/endpoint/Booking Items/Booking Items/BoookingItems",
-        "api-reference/endpoint/Booking Items/Booking Items/AddItems",
-        "api-reference/endpoint/Booking Items/Booking SIngle Items/BookingSingleItems",
-        "api-reference/endpoint/Booking Items/Booking SIngle Items/UpdateSingleItems",
-        "api-reference/endpoint/Booking Items/Booking SIngle Items/RemoveSingleItems"
+        {
+          "group": "Booking PDF",
+          "pages": [
+            "api-reference/BookingPdf",
+            {
+              "group": "Booking Label",
+              "pages": [
+                "api-reference/endpoint/Booking PDF/BookingLabel"
+              ]
+            },
+            {
+              "group": "Booking Invoice",
+              "pages": [
+                "api-reference/endpoint/Booking PDF/BookingInvoice"
+              ]
+            },
+            {
+              "group": "Booking TNT Label",
+              "pages": [
+                "api-reference/endpoint/Booking PDF/BookingTntLabel"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/BookingPdf"
+        {
+          "group": "Members",
+          "pages": [
+            "api-reference/endpoint/Members/member"
+          ]
+        }
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/endpoint/BookingLabel",
-        "api-reference/endpoint/BookingInvoice",
-        "api-reference/endpoint/BookingTntLabel"
+        {
+          "group": "Locations",
+          "pages": [
+            "api-reference/Locations",
+            {
+              "group": "Get Locations",
+              "pages": [
+                "api-reference/endpoint/Locations/GetLocations"
+              ]
+            },
+            {
+              "group": "Search Locations",
+              "pages": [
+                "api-reference/endpoint/Locations/SearchLocations"
+              ]
+            },
+            {
+              "group": "Get Locations Within Postcode",
+              "pages": [
+                "api-reference/endpoint/Locations/PostCodeLocations"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/Members"
+        {
+          "group": "Orders",
+          "pages": [
+            "api-reference/Orders",
+            {
+              "group": "Create Orders",
+              "pages": [
+                "api-reference/endpoint/Orders/CreateOrders"
+              ]
+            },
+            {
+              "group": "Get Saved Orders",
+              "pages": [
+                "api-reference/endpoint/Orders/GetSavedOrders"
+              ]
+            },
+            {
+              "group": "Single Saved Order",
+              "pages": [
+                "api-reference/endpoint/Orders/Single Saved Orders/SingleSavedOrders",
+                "api-reference/endpoint/Orders/Single Saved Orders/UpdateSinglesavedOrders",
+                "api-reference/endpoint/Orders/Single Saved Orders/RemoveSingleSavedOrders"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "group": "",
       "pages": [
-        "api-reference/endpoint/member"
-      ]
-    },
-    {
-      "group": "",
-      "pages": [
-        "api-reference/Locations"
-      ]
-    },
-    {
-      "group": "",
-      "pages": [
-        "api-reference/endpoint/GetLocations",
-        "api-reference/endpoint/SearchLocations",
-        "api-reference/endpoint/PostCodeLocations"
-      ]
-    },
-    {
-      "group": "",
-      "pages": [
-        "api-reference/Orders"
-      ]
-    },
-    {
-      "group": "",
-      "pages": [
-        "api-reference/endpoint/Orders/CreateOrders",
-        "api-reference/endpoint/Orders/GetSavedOrders",
-        "api-reference/endpoint/Orders/Single Saved Orders/SingleSavedOrders",
-        "api-reference/endpoint/Orders/Single Saved Orders/UpdateSinglesavedOrders",
-        "api-reference/endpoint/Orders/Single Saved Orders/RemoveSingleSavedOrders"
-      ]
-    },
-    {
-      "group": "",
-      "pages": [
-        "api-reference/Couriers"
-      ]
-    },
-    {
-      "group": "",
-      "pages": [
-        "api-reference/endpoint/FetchAllCouries"
+        {
+          "group": "Couriers",
+          "pages": [
+            "api-reference/endpoint/Couries/FetchAllCouries"
+          ]
+        }
       ]
     },
     {

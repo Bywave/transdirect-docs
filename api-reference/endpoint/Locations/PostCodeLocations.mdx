@@ -1,0 +1,71 @@
+---
+title: "Get Locations Within Postcode"
+# api: "GET https://www.transdirect.com.au/api/locations/postcode/postCode"
+openapi: "GET /locations/postcode/{postCode}"
+---
+<ParamField path="locality" type="string">
+locality
+</ParamField>
+<ParamField path="postcode" type="string">
+postcode
+</ParamField>
+<ParamField path="state" type="string">
+state
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/locations/postcode/postCode'
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "locations": [
+    {
+      "locality": "BARANGAROO",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "DAWES POINT",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "HAYMARKET",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "MILLERS POINT",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "PARLIAMENT HOUSE",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "SYDNEY",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "SYDNEY SOUTH",
+      "postcode": "2000",
+      "state": "NSW"
+    },
+    {
+      "locality": "THE ROCKS",
+      "postcode": "2000",
+      "state": "NSW"
+    }
+  ]
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ 200
+```
+</ResponseExample>

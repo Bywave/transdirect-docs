@@ -1,0 +1,285 @@
+---
+# api: "GET https://www.transdirect.com.au/api/bookings/v4/id"
+title: "Get a Single Booking"
+openapi: "GET /bookings/v4/{id}"
+---
+{/* ### Path  */}
+<ParamField body="booked_at" type="number" required>
+declared_value must be number 
+</ParamField>
+<ParamField body="booked_by" type="string" required>
+referrer must be number 
+</ParamField>
+<ParamField body="created_at" type="string" required>
+requesting_site must be number 
+</ParamField>
+<ParamField body="declared_value" type="number">
+tailgate_pickup are optional fields and they are set to false by default.
+</ParamField>
+<ParamField body="insured_value" type="number">
+tailgate_delivery are optional fields and they are set to false by default.
+</ParamField>
+<ParamField body="description" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="items" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="id" type="int">
+items must be object value 
+</ParamField>
+<ParamField body="weight" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="length" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="width" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="height" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="quantity" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="label" type="url">
+items must be object value 
+</ParamField>
+<ParamField body="notifications" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="email" type="boolean">
+items must be object value 
+</ParamField>
+<ParamField body="sms" type="boolean">
+items must be object value 
+</ParamField>
+<ParamField body="quotes" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="allied" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="total" type="float">
+items must be object value 
+</ParamField>
+<ParamField body="price_insurance_ex" type="float">
+items must be object value 
+</ParamField>
+<ParamField body="fee" type="float">
+items must be object value 
+</ParamField>
+<ParamField body="insured_amount" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="service" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="transit_time" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="pickup_dates" type="array">
+items must be object value 
+</ParamField>
+<ParamField body="pickup_time" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="from" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="to" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="tnt_road_express" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="receiver" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="address" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="company_name" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="email" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="name" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="postcode" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="phone" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="state" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="suburb" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="type" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="country" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="sender" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="pickup_window" type="array">
+items must be object value 
+</ParamField>
+<ParamField body="connote" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="charged_weight" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="scanned_weight" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="special_instructions" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="status" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="updated_at" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="tailgate_pickup" type="boolean">
+items must be object value 
+</ParamField>
+<ParamField body="tailgate_delivery" type="boolean">
+items must be object value
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request POST 'https://www.transdirect.com.au/api/bookings/v4/id'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+  {
+  "id": 623630,
+  "booked_at": "2015-01-08T14:42:07+1100",
+  "booked_by": "sender",
+  "created_at": "2015-05-18T13:44:25+1000",
+  "declared_value": 0,
+  "insured_value": 0,
+  "description": "TEST BOOKINGS",
+  "items": [
+    {
+      "id": 1055686,
+      "description": "Carton",
+      "weight": 5,
+      "length": 5,
+      "width": 10,
+      "height": 5,
+      "quantity": 1
+    }
+  ],
+  "label": "http://www.dev.transdirect.com.au/api/bookings/623630/label",
+  "notifications": {
+    "email": false,
+    "sms": false
+  },
+  "quotes": {
+    "allied": {
+      "total": 79.24,
+      "price_insurance_ex": 72.09,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "1-2 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    },
+    "tnt_overnight_express": {
+      "total": 34.915,
+      "price_insurance_ex": 27.765,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "4 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    },
+    "tnt_road_express": {
+      "total": 41.845,
+      "price_insurance_ex": 34.695,
+      "fee": 7.15,
+      "insured_amount": 4500,
+      "service": "road",
+      "transit_time": "4 days",
+      "pickup_dates": [
+        "2015-08-27",
+        "2015-08-28"
+      ],
+      "pickup_time": {
+        "from": "14:00",
+        "to": "18:00"
+      }
+    }
+  },
+  "receiver": {
+    "id": 1285798,
+    "address": "1|TEST",
+    "company_name": "TEST Company",
+    "email": "jorge@bywave.com.au",
+    "name": "TEST BOOKINGS",
+    "postcode": "2000",
+    "phone": "1111111111",
+    "state": "NSW",
+    "suburb": "SYDNEY",
+    "type": "business",
+    "country": "AU"
+  },
+  "sender": {
+    "id": 1285797,
+    "address": "1|TEST",
+    "company_name": "",
+    "email": "jorge@bywave.com.au",
+    "name": "TEST BOOKINGS",
+    "postcode": "2000",
+    "phone": "1111111111",
+    "state": "NSW",
+    "suburb": "SYDNEY",
+    "type": "residential",
+    "country": "AU"
+  },
+  "pickup_window": [
+    "2015-01-12T12:00:00+1100",
+    "2015-01-12T17:00:00+1100"
+  ],
+  "connote": "IRE000623630",
+  "charged_weight": 5,
+  "scanned_weight": 0,
+  "special_instructions": " - NO REDELIVERY OR REDIRECTION WITHOUT PERMISSION FROM TRANSDIRECT",
+  "status": "confirmed",
+  "updated_at": "2015-05-18T13:44:44+1000",
+  "tailgate_pickup": false,
+  "tailgate_delivery": false
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+```
+</ResponseExample>

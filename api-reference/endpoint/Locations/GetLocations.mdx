@@ -1,0 +1,66 @@
+---
+title: "Get Locations"
+# api: "GET https://www.transdirect.com.au/api/locations"
+openapi: "GET /locations"
+---
+<ParamField path="next_page" type="url">
+next_page
+</ParamField>
+<ParamField path="code" type="number">
+code
+</ParamField>
+<ParamField path="locations" type="object">
+locations
+</ParamField>
+<ParamField path="locality" type="string">
+locality
+</ParamField>
+<ParamField path="postcode" type="string">
+postcode
+</ParamField>
+<ParamField path="state" type="string">
+state
+</ParamField>
+<ParamField path="priority" type="string">
+priority
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/locations'
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "next_page": "https://www.transdirect.com.au/api/locations/page/2",
+  "code": 200,
+  "locations": {
+    "1": {
+      "id": "1",
+      "locality": "AUSTRALIAN NATIONAL UNIVERSITY",
+      "postcode": "0200",
+      "state": "ACT",
+      "priority": "1"
+    },
+    "2": {
+      "id": "2",
+      "locality": "BARTON",
+      "postcode": "0221",
+      "state": "ACT",
+      "priority": "1"
+    },
+    "3": {
+      "id": "3",
+      "locality": "DARWIN",
+      "postcode": "0800",
+      "state": "NT",
+      "priority": "1"
+    }
+  }
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ 200
+```
+</ResponseExample>

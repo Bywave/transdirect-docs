@@ -2,11 +2,162 @@
 title: "Single Saved Order"
 description: "<b>Example:</b> /orders/4<br/>
 <b>Statuses:</b> pending, booked, manually_dispatched, cancelled"
-api: "GET https://www.transdirect.com.au/api/orders/id"
+# api: "GET https://www.transdirect.com.au/api/orders/id"
+openapi: "GET /orders/{id}"
 ---
 ### body
-<ParamField path="id" type="int">
-id
+<ParamField body="booked_at" type="number" required="true">
+declared_value must be number 
+</ParamField>
+<ParamField body="booked_by" type="string" required="true">
+referrer must be number 
+</ParamField>
+<ParamField body="created_at" type="string" required="true">
+requesting_site must be number 
+</ParamField>
+<ParamField body="declared_value" type="number">
+tailgate_pickup are optional fields and they are set to false by default.
+</ParamField>
+<ParamField body="insured_value" type="number">
+tailgate_delivery are optional fields and they are set to false by default.
+</ParamField>
+<ParamField body="description" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="items" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="id" type="int">
+items must be object value 
+</ParamField>
+<ParamField body="weight" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="length" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="width" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="height" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="quantity" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="label" type="url">
+items must be object value 
+</ParamField>
+<ParamField body="notifications" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="email" type="boolean">
+items must be object value 
+</ParamField>
+<ParamField body="sms" type="boolean">
+items must be object value 
+</ParamField>
+<ParamField body="quotes" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="allied" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="total" type="float">
+items must be object value 
+</ParamField>
+<ParamField body="price_insurance_ex" type="float">
+items must be object value 
+</ParamField>
+<ParamField body="fee" type="float">
+items must be object value 
+</ParamField>
+<ParamField body="insured_amount" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="service" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="transit_time" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="pickup_dates" type="array">
+items must be object value 
+</ParamField>
+<ParamField body="pickup_time" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="from" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="to" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="tnt_road_express" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="receiver" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="address" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="company_name" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="email" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="name" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="postcode" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="phone" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="state" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="suburb" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="type" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="country" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="sender" type="object">
+items must be object value 
+</ParamField>
+<ParamField body="pickup_window" type="array">
+items must be object value 
+</ParamField>
+<ParamField body="connote" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="charged_weight" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="scanned_weight" type="number">
+items must be object value 
+</ParamField>
+<ParamField body="special_instructions" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="status" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="updated_at" type="string">
+items must be object value 
+</ParamField>
+<ParamField body="tailgate_pickup" type="boolean">
+items must be object value 
+</ParamField>
+<ParamField body="tailgate_delivery" type="boolean">
+items must be object value
 </ParamField>
 <RequestExample>
 ```bash Example Request

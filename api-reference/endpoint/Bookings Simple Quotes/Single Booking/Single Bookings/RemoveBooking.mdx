@@ -1,0 +1,23 @@
+---
+title: "Remove a booking"
+# api: "DELETE https://www.transdirect.com.au/api/bookings/v4/id"
+openapi: "DELETE /bookings/v4/{id}"
+---
+{/* ### body 
+<ParamField path="id" type="int">
+id
+</ParamField> */}
+<RequestExample>
+```bash Example Request
+curl --location --request DELETE 'https://www.transdirect.com.au/api/bookings/v4/id'
+--header 'Content-Type: application/json'\
+--header 'Authorization : Bearer <fec5ae54d239f1bbf23a12010989ba17>'\
+--data-raw '{
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+204
+```
+</ResponseExample>

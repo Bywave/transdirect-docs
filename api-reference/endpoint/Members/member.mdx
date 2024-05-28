@@ -1,0 +1,77 @@
+---
+title: "Member"
+# api: "GET https://www.transdirect.com.au/api/member"
+openapi: "GET /member"
+---
+<ParamField path="company_name" type="string">
+description
+</ParamField>
+<ParamField path="contact_name" type="string">
+weight
+</ParamField>
+<ParamField path="address" type="string">
+length
+</ParamField>
+<ParamField path="suburb" type="string">
+width
+</ParamField>
+<ParamField path="postcode" type="number">
+height
+</ParamField>
+<ParamField path="state" type="string">
+quantity
+</ParamField>
+<ParamField path="phone" type="string">
+description
+</ParamField>
+<ParamField path="discount_factor" type="number">
+weight
+</ParamField>
+<ParamField path="credit_limit" type="number">
+length
+</ParamField>
+<ParamField path="credit_limit_available" type="number">
+width
+</ParamField>
+<ParamField path="charge_type" type="string">
+height
+</ParamField>
+<ParamField path="last_invoice_timestamp" type="string">
+quantity
+</ParamField>
+<ParamField path="terms" type="string">
+description
+</ParamField>
+<ParamField path="active" type="string">
+weight
+</ParamField>
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://www.transdirect.com.au/api/member'
+--header 'Content-Type:application/json'\
+--data-raw '{
+{
+  "id": 503,
+  "company_name": "Bywave Testing Account",
+  "contact_name": "Chris",
+  "address": "2",
+  "suburb": "",
+  "postcode": 2117,
+  "state": "NSW",
+  "phone": "0",
+  "discount_factor": 0,
+  "credit_limit": 3000,
+  "credit_limit_available": 2941.2,
+  "charge_type": "",
+  "last_invoice_timestamp": "0",
+  "terms": "0",
+  "active": "no"
+}
+}'
+``` 
+</RequestExample>   
+<ResponseExample>
+```json Response
+ 200
+```
+</ResponseExample>

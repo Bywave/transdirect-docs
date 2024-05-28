@@ -1,7 +1,56 @@
 ---
 title: "Create Orders"
-api: "POST https://www.transdirect.com.au/api/orders"
+# api: "POST https://www.transdirect.com.au/api/orders"
+openapi: "POST /orders"
 ---
+<ParamField path="transdirect_order_id" type="number">
+transdirect_order_id
+</ParamField>
+<ParamField path="order_id" type="string">
+order_id
+</ParamField>
+<ParamField path="goods_summary" type="string">
+goods_summary
+</ParamField>
+<ParamField path="goods_dump" type="string">
+goods_dump
+</ParamField>
+<ParamField path="imported_from" type="string">
+imported_from
+</ParamField>
+<ParamField path="purchased_time" type="string">
+purchased_time
+</ParamField>
+<ParamField path="sale_price" type="number">
+sale_price
+</ParamField>
+<ParamField path="selected_courier" type="string">
+selected_courier
+</ParamField>
+<ParamField path="paid_time" type="string">
+paid_time
+</ParamField>
+<ParamField path="buyer_name" type="string">
+buyer_name
+</ParamField>
+<ParamField path="buyer_email" type="string">
+buyer_email
+</ParamField>
+<ParamField path="delivery" type="object">
+delivery
+</ParamField>
+<ParamField path="name" type="string">
+name
+</ParamField>
+<ParamField path="email" type="string">
+email
+</ParamField>
+<ParamField path="phone" type="string">
+phone
+</ParamField>
+<ParamField path="address" type="string">
+address
+</ParamField>
 It is required that the body contains the fields by selecting the ‘Create a saved order’ link above. Once an Order has been created, you can retrieve a quote id for a booking by using the PUT method.
 <RequestExample>
 ```bash Example Request

@@ -1,13 +1,25 @@
 ---
 title: "Update an Item"
 api: "PUT https://www.transdirect.com.au/api/bookings/v4/id/items/item_id"
+openapi: "PUT /bookings/v4/{id}/items/{item_id}"
 ---
-### body 
-<ParamField path="id" type="int">
-id
+<ParamField path="description" type="string">
+description
 </ParamField>
-<ParamField path="item_id" type="int">
-item_id
+<ParamField path="weight" type="number">
+weight
+</ParamField>
+<ParamField path="length" type="number">
+length
+</ParamField>
+<ParamField path="width" type="number">
+width
+</ParamField>
+<ParamField path="height" type="number">
+height
+</ParamField>
+<ParamField path="quantity" type="number">
+quantity
 </ParamField>
     <RequestExample>
 ```bash Example Request
